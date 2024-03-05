@@ -1,0 +1,39 @@
+Object { base_experience: 112, height: 4, id: 25, name: "pikachu", order: 35, sprites: {…}, stats: (6) […], types: (1) […], weight: 60 }
+​
+base_experience: 112
+​
+height: 4
+​
+id: 25
+​
+name: "pikachu"
+​
+order: 35
+​
+sprites: Object { back_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png", back_female: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/female/25.png", back_shiny: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/25.png", … }
+​
+stats: Array(6) [ {…}, {…}, {…}, … ]
+​
+types: Array [ {…} ]
+​​
+0: Object { slot: 1, type: {…} }
+​​​
+slot: 1
+​​​
+type: Object { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" }
+​​​​
+name: "electric"
+​​​​
+url: "https://pokeapi.co/api/v2/type/13/"
+​​​​
+<prototype>: Object { … }
+​​​
+<prototype>: Object { … }
+​​
+length: 1
+​​
+<prototype>: Array []
+​
+weight: 60
+​
+<prototype>: Object { … }
