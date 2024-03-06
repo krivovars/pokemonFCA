@@ -28,6 +28,7 @@ const mainFunction = () => {
     pokemonDefense.textContent = "";
     pokemonSpecialAttack.textContent = "";
     pokemonSpecialDefense.textContent = "";
+    pokemonTypes.textContent = ""
     pokemonSpeed.textContent = ""
     pokemonImg.src = ""
     if (typeof pokemon === 'string') {
@@ -56,45 +57,53 @@ const pokemonOutput = (data) => {
         weight,
         height,
         stats,
-        sprites
+        sprites,
+        types
     } = data
-    
+
     const {front_default} = sprites
-    
-    
+
+
     stats.forEach(item=>{
         switch(item.stat.name) {
             case 'hp':
-                pokemonHp.textContent = `HP: ${item.base_stat}`;
+                pokemonHp.textContent = `${item.base_stat}`;
                 break;
             case 'attack':
-                pokemonAttack.textContent = `Attack: ${item.base_stat}`;
+                pokemonAttack.textContent = `${item.base_stat}`;
                 break;
             case 'defense':
-                pokemonDefense.textContent = `Defense: ${item.base_stat}`;
+                pokemonDefense.textContent = `${item.base_stat}`;
                 break;
             case 'special-attack':
-                pokemonSpecialAttack.textContent = `Special Attack: ${item.base_stat}`;
+                pokemonSpecialAttack.textContent = `${item.base_stat}`;
                 break;
             case 'special-defense':
-                pokemonSpecialDefense.textContent = `Special Defense: ${item.base_stat}`;
+                pokemonSpecialDefense.textContent = `${item.base_stat}`;
                 break;
             case 'speed':
-                pokemonSpeed.textContent = `Speed: ${item.base_stat}`;
+                pokemonSpeed.textContent = `${item.base_stat}`;
                 break;
             default:
                 console.log("Something wrong")
         }
     })
-
-
-    pokemonName.textContent = `Name: ${name.toUpperCase()}`;
-    pokemonId.textContent = `ID: ${id}`;
-    pokemonWeight.textContent = `Weight: ${weight}`;
-    pokemonHeight.textContent = `Height: ${height}`;
-    console.log(front_default)
-    pokemonImg.src = front_default
     
+    
+    types.forEach(type=>{
+        const span = document.createElement('span');
+        span.textContent = type.type.name.toUpperCase() + ' ';
+        pokemonTypes.appendChild(span);
+    })
+
+
+
+    pokemonName.textContent = `${name.toUpperCase()}`;
+    pokemonId.textContent = `${id}`;
+    pokemonWeight.textContent = `${weight}`;
+    pokemonHeight.textContent = `${height}`;
+    pokemonImg.src = front_default
+
 
 }
 
